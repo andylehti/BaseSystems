@@ -8,7 +8,7 @@ def toBase(d, b):
     while r > 0: s = c[r % b] + s; r //= b
     return s.zfill(n)
 
-def toDecimal(c, b):
+def fromBase(c, b): # converts any base that may contain leading zeroes to decimal to preserve the data
     chars = string.printable[:90]
     v, l = 0, len(c)
     for i, ch in enumerate(reversed(c)):
