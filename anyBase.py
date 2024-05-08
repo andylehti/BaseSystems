@@ -1,7 +1,7 @@
 import math
 
-def anyBase(number, base=1496):
-    return '0' if number == 0 else ' '.join(str(number // base ** i % base) for i in range(int(math.log(number, base)), -1, -1))
+def anyBase(n, b=1496):
+    return '0' if n == 0 else ' '.join(str(n // b ** i % b) for i in range(int(math.log(n, b)), -1, -1))
 
-def fromAnyBase(converted_number, base=1496):
-    return sum(int(digit) * base ** i for i, digit in enumerate(reversed(converted_number.split(' '))))
+def fromAnyBase(n, b=1496):
+    return sum(int(c) * b ** i for i, c in enumerate(reversed(n.split(' '))))
