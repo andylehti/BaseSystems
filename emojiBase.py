@@ -19,3 +19,4 @@ def fromEmojiBase(s, b):
 # not stable
 # emoji modifiers are an issue
 # code does not group properly for conversion
+# best if a database of emoji was integrally created, and stored and for the code to check if data exists so that it does not have to create it for every conversion
