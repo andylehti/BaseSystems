@@ -17,5 +17,5 @@ def fromMultiBase(vs):
 # for i in range(1, 10000):
 #    a = toMultiBase(i)
 #    b = fromMultiBase(a)
-#    print(i, a, b, b == i)
+#    print(f'{i} = {a} \t = {b}  \t{b == i}')
 # test using the above code snippet
