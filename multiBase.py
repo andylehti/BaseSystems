@@ -1,13 +1,13 @@
 def toMultiBase(n):
-    r, b = [], 1
+    r, b = [], 2
     while n > 0:
-        r.append((n % b) + 1)
+        r.append(n % b)
         n //= b
         b += 1
     return ' '.join(map(str, r))
 
 def fromMultiBase(vs):
-    vs, n, p, b = list(map(lambda x: x-1, map(int, vs.split()))), 0, 1, 1
+    vs, n, p, b = list(map(lambda x: x, map(int, vs.split()))), 0, 1, 2
     for v in vs:
         n += v * p
         p *= b
