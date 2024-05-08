@@ -178,9 +178,7 @@ Base 13:
 
 Base 14:
 
-| Compact Base | Decimal Conversion | Decimal Value
-
- ÷ Base |
+| Compact Base | Decimal Conversion | Decimal Value ÷ Base |
 |--------------|--------------------|----------------------|
 | 0            | 0                  | 0                    |
 | 00           | 14                 | 1                    |
