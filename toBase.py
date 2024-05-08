@@ -1,6 +1,6 @@
 import string
 
-def getBase(c): c = ''.join([x for x in string.printable[:c] if x not in '/\\`"\',_']) + '/\\`"\',_'; return c
+def getBase(c): b = ''.join([x for x in string.printable[:90] if x not in '/\\`"\',_!#$%&()*']) + '&()*$%/\\`"\',_!#'; return b[:c]
 
 def toBase(n, b):
     c = getBase(b)
