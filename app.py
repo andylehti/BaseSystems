@@ -9,23 +9,20 @@ def fromAnyBase(n, b=2):
 
 st.title('Base Conversion Tool')
 
-# Input fields
-n = st.text_input('Integer Value', '0')
-base = st.text_input('Base', '2')
+base = st.number_input('Enter base:', min_value=2, value=6)  # Set default base as 6
 
-# Button to convert integer to any base
-if st.button('To Base'):
+number = st.text_input('Enter number:', value='123')  # Text field for the number input
+if st.button('Convert to Base'):
     try:
-        result = anyBase(int(n), int(base))
-        st.text_input('Any Base String', result)
+        base_string = anyBase(int(number), base)
+        st.text_input('Base representation:', value=base_string)  # This field updates with the conversion result
     except Exception as e:
         st.error(f"Error: {str(e)}")
 
-# Button to convert from any base to integer
-if st.button('From Base'):
-    any_base_string = st.text_input('Any Base String', '')
+base_string = st.text_input('Enter base string:', value='1 0 1 1 0 1 0 1')  # Text field for the base string input
+if st.button('Convert to Integer'):
     try:
-        result = fromAnyBase(any_base_string, int(base))
-        st.text_input('Integer Value', str(result))
+        number = fromAnyBase(base_string, base)
+        st.text_input('Integer value:', value=str(number))  # This field updates with the conversion result
     except Exception as e:
         st.error(f"Error: {str(e)}")
